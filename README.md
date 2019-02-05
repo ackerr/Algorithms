@@ -2,7 +2,3 @@
 
 ## leetcode 
 
-> TODO
-### easy
-
-- 
