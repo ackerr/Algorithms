@@ -1,4 +1,4 @@
-Table: Person
+Table: `Person`
 ```
 +-------------+---------+
 | Column Name | Type    |
@@ -9,7 +9,7 @@ Table: Person
 +-------------+---------+
 ```
 PersonId is the primary key column for this table.
-Table: Address
+Table: `Address`
 ```
 +-------------+---------+
 | Column Name | Type    |
