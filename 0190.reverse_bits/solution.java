@@ -8,5 +8,4 @@ class solution{
         }
         return ans;
     }
-
 }
