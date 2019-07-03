@@ -1,5 +1,4 @@
 class Solution:
-
     def hamming_weight(self, n):
         count = 0
         for i in range(32):
@@ -10,4 +9,4 @@ class Solution:
 
     def other_solution(self, n):
         """ use build in function """
-        return bin(n).count('1')
+        return bin(n).count("1")

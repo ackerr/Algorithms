@@ -6,7 +6,6 @@
 
 
 class Solution:
-
     def deleteNode(self, node):
         """
         :type node: ListNode

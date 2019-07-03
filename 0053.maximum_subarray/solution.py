@@ -1,5 +1,4 @@
 class Solution:
-
     def max_sub_array(self, nums):
         total, res = 0, nums[0]
         for num in nums:

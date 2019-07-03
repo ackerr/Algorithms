@@ -1,10 +1,9 @@
 class Solution:
-
     def is_valid(self, s):
-        mapping = {')': '(', '}': '{', ']': '['}
+        mapping = {")": "(", "}": "{", "]": "["}
         stack = []
         for char in s:
-            if char in '([{':
+            if char in "([{":
                 stack.append(char)
             elif stack and stack[-1] == mapping[char]:
                 stack.pop()

@@ -1,6 +1,5 @@
 class Solution:
-
-    def two_sum(self, numbers,  target):
+    def two_sum(self, numbers, target):
         flag = {}
         for index, number in enumerate(numbers):
             sub = target - number

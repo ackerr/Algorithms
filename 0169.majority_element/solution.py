@@ -1,5 +1,4 @@
 class Solution:
-
     def majority_element(self, nums):
         total, ans = 0, 0
         for num in nums:
@@ -13,4 +12,4 @@ class Solution:
 
     def other_solution(self, nums):
         """ one line"""
-        return sorted(nums)[len(nums)//2]
+        return sorted(nums)[len(nums) // 2]

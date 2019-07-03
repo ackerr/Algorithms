@@ -1,5 +1,4 @@
 class RecentCounter:
-
     def __init__(self):
         self.nums = []
 
@@ -8,4 +7,3 @@ class RecentCounter:
             self.nums.pop(0)
         self.nums.append(t)
         return len(self.nums)
-

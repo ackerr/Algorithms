@@ -1,5 +1,4 @@
 class Solution:
-
     def is_isomorphic(self, s: str, t: str) -> bool:
         """ 根据值在两个字符串中的索引是否相同 """
         for i, v in enumerate(s):
@@ -15,10 +14,10 @@ class Solution:
                 if d[v] != t[i]:
                     return False
             elif t[i] in d.values():
-                    return False
+                return False
             d[v] = t[i]
         return True
 
 
 if __name__ == "__main__":
-    print(Solution().test('abc', 'bac'))
+    print(Solution().test("abc", "bac"))

@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def rob(self, nums: List[int]) -> int:
         last, now = 0, 0
@@ -9,5 +10,5 @@ class Solution:
         return now
 
 
-if __name__ == '__main__':
-    print(Solution().rob([2,7,9,3,1]))
+if __name__ == "__main__":
+    print(Solution().rob([2, 7, 9, 3, 1]))

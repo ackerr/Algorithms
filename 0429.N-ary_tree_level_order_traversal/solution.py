@@ -3,8 +3,9 @@ class Node:
         self.val = val
         self.children = children
 
+
 class Solution:
-    def level_order(self, root: 'Node') -> List[List[int]]:
+    def level_order(self, root: "Node") -> List[List[int]]:
         ans, nodes = [], [root]
         while nodes:
             temp, temp_nodes = [], []

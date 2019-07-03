@@ -1,5 +1,4 @@
 class Solution:
-
     def convert_to_title(self, n: int) -> str:
         """
         1 -> 'A'
@@ -13,4 +12,4 @@ class Solution:
                 mod = 26
                 n -= 1
             ans.append(chr(64 + mod))
-        return ''.join(ans[::-1])
+        return "".join(ans[::-1])

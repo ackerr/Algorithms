@@ -1,5 +1,4 @@
 class Solution:
-
     def reverse_bits(self, n):
         """
         2 << 1 == 2 * 2
@@ -14,4 +13,3 @@ class Solution:
             ans = (ans << 1) + (n & 1)
             n >>= 1
         return ans
-

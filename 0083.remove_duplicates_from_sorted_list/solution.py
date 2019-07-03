@@ -6,7 +6,6 @@ class ListNode:
 
 
 class Solution:
-
     def delete_duplicates(self, head: ListNode) -> ListNode:
         cur = head
         while cur and cur.next:

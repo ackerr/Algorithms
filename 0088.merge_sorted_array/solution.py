@@ -1,5 +1,4 @@
 class Solution:
-
     def merge(self, nums1, m, nums2, n):
         """
         :type nums1: List[int]
@@ -10,11 +9,11 @@ class Solution:
         """
         # O(m)
         while m > 0 and n > 0:
-            if nums1[m-1] > nums2[n-1]:
-                nums1[m+n-1] = nums1[m-1]
+            if nums1[m - 1] > nums2[n - 1]:
+                nums1[m + n - 1] = nums1[m - 1]
                 m -= 1
             else:
-                nums1[m+n-1] = nums2[n-1]
+                nums1[m + n - 1] = nums2[n - 1]
                 n -= 1
         if n > 0:
             nums1[:n] = nums2[:n]
@@ -27,6 +26,6 @@ class Solution:
         return nums1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().use_sort_solution([4, 5, 6, 0, 0], 2, [1, 6, 7], 3))
     print(Solution().merge([4, 5, 6, 0, 0], 2, [1, 6, 7], 3))

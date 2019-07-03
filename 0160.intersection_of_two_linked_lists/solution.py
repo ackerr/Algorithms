@@ -5,7 +5,6 @@ class ListNode(object):
 
 
 class Solution:
-
     def get_intersection_node(self, headA: ListNode, headB: ListNode) -> ListNode:
         a, b = headA, headB
         while a != b:

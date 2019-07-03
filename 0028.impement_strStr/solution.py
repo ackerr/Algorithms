@@ -1,7 +1,6 @@
 class Solution:
-
     def strStr(self, haystack: str, needle: str) -> int:
-        if needle == '':
+        if needle == "":
             return 0
         if haystack.split(needle) != haystack:
             return len(haystack.split(needle))

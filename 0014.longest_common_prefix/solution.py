@@ -1,7 +1,6 @@
 class Solution:
-
     def longest_common_prefix(self, strs):
-        prefix = ''
+        prefix = ""
         if len(strs) == 0:
             return prefix
 
@@ -15,7 +14,7 @@ class Solution:
         return prefix
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
-    print(s.longest_common_prefix(['s']))
-    print(s.longest_common_prefix(['s', 'as']))
+    print(s.longest_common_prefix(["s"]))
+    print(s.longest_common_prefix(["s", "as"]))

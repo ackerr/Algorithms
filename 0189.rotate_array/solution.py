@@ -2,14 +2,13 @@ from typing import List
 
 
 class Solution:
-
     def rotate(self, nums: List[int], k: int) -> None:
         """
         Do not return anything, modify nums in-place instead.
         """
         n = len(nums)
         k %= n
-        nums[:] = nums[n - k:] + nums[:n - k]
+        nums[:] = nums[n - k :] + nums[: n - k]
 
     def no_extra_space(self, nums, k):
         """
@@ -21,6 +20,7 @@ class Solution:
         3. -> [3, 4, 5, 1, 2]
 
         """
+
         def reverse(values: List, left: int, right: int):
             while left < right:
                 nums[left], nums[right] = nums[right], nums[left]

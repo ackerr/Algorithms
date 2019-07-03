@@ -8,6 +8,7 @@ class Solution:
     ...
     可以看出就是斐波那契的变种
     """
+
     def climb_stairs(self, n):
         if n < 3:
             return n
@@ -18,11 +19,11 @@ class Solution:
             return n
         a, b, m = 1, 2, 3
         while m <= n:
-            a, b, m = b, a+b, m+1
+            a, b, m = b, a + b, m + 1
         return b
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     for i in range(1, 10):
         print(Solution().climb_stairs(i))
         print(Solution().loop_solution(i))

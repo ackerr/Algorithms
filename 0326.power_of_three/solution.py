@@ -1,5 +1,4 @@
 class Solution:
-
     def is_power_of_three(self, n: int) -> bool:
         return n > 0 and 3 ** 19 % n == 0
 

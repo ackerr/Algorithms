@@ -1,12 +1,10 @@
 class ListNode:
-
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
 class Solution:
-
     def reverse_list(self, head: ListNode) -> ListNode:
         cur, ans = head, None
         while cur:

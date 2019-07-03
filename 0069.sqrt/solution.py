@@ -1,7 +1,6 @@
 class Solution:
-
     def my_sqrt(self, x):
-        return int(x**0.5)
+        return int(x ** 0.5)
 
     def binary_search(self, x):
         if x < 2:
@@ -16,5 +15,5 @@ class Solution:
         return left - 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().binary_search(10))

@@ -1,5 +1,4 @@
 class Solution:
-
     def remove_duplicates(self, nums):
         total = 0
         if not nums:
