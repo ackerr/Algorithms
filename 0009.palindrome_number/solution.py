@@ -1,8 +1,7 @@
 class Solution:
     
     def is_palindrome(self, x):
-        returb str(x) == str(x)[::-1]
-
+        return str(x) == str(x)[::-1]
 
     def not_use_str_solution(self, x):
         if x < 0 or ( x != 0 and x % 10 == 0):
