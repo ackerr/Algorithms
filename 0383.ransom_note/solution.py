@@ -21,9 +21,8 @@ class Solution(object):
 
     def other_solution(self, ransom_note: str, magazine: str) -> bool:
         for i in ransom_note:
-            result = magazine.replace(i, '', 1)
+            result = magazine.replace(i, "", 1)
             if len(result) == len(magazine):
                 return False
             magazine = result
         return True
-

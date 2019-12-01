@@ -7,4 +7,4 @@ class Solution:
             - n-1 ， 全部位为1，长度减1
             - n & n-1 ,则为0
         """
-        return n > 0 and (n & n-1) == 0
+        return n > 0 and (n & n - 1) == 0

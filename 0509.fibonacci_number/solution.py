@@ -11,6 +11,6 @@ class Solution:
         return self.fib_recursion(n - 1) + self.fib_recursion(n - 2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().fib_loop(10) == 55
     assert Solution().fib_recursion(10) == 55

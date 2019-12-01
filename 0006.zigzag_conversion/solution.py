@@ -18,4 +18,3 @@ class Solution:
 if __name__ == "__main__":
     assert Solution().convert("PAYPALISHIRING", 3) == "PAHNAPLSIIGYIR"
     assert Solution().convert("PAYPALISHIRING", 4) == "PINALSIGYAHRPI"
-

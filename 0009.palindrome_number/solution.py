@@ -1,10 +1,9 @@
 class Solution:
-    
     def is_palindrome(self, x):
         return str(x) == str(x)[::-1]
 
     def not_use_str_solution(self, x):
-        if x < 0 or ( x != 0 and x % 10 == 0):
+        if x < 0 or (x != 0 and x % 10 == 0):
             return False
         temp = 0
         while x > temp:

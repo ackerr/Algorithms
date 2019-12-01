@@ -49,9 +49,8 @@ class Solution:
                 # 记录最长回文子串的长度和相应它在原始字符串中的起点
                 max_len = p[i]
                 start = (i - max_len) // 2
-        return s[start: start + max_len]
+        return s[start : start + max_len]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().longest_palindrome("bdbbd"))
-

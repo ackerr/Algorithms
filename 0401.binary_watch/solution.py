@@ -6,6 +6,6 @@ class Solution:
         ans = []
         for i in range(12):
             for j in range(60):
-                if bin(i).count('1') + bin(j).count('1') == num:
-                    ans.append('%d:%02d' % (i, j))
+                if bin(i).count("1") + bin(j).count("1") == num:
+                    ans.append("%d:%02d" % (i, j))
         return ans

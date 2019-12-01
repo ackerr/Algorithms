@@ -1,5 +1,5 @@
 class Solution:
-    def path_sum(self, root: TreeNode, sum: int) -> int:
+    def path_sum(self, root, sum: int) -> int:
         """ 遍历所有的路径以及子路径，每次递归就将(sum - val), 出现0是，说明找到符合条件的 """
         if not root:
             return 0

@@ -13,5 +13,5 @@ class Solution:
         return -1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().pivot_index([-1, -1, 0, 1, 1, 0]) == 5

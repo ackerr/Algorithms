@@ -23,7 +23,7 @@ class Solution:
                 if j - i > 1 and nums[j] == nums[j - 1]:  # 移除第二位相同的项
                     continue
 
-                if sum(nums[j:j + 3], nums[i]) > target:
+                if sum(nums[j : j + 3], nums[i]) > target:
                     break
 
                 if sum([nums[i], nums[j], nums[-1], nums[-2]]) < target:
@@ -50,5 +50,5 @@ class Solution:
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().four_sum([0, 0, 0, 0]) == [[0, 0, 0, 0]]

@@ -4,4 +4,4 @@ class Solution:
             if c not in s:
                 return c
             else:
-                s = s.replace(c, '', 1)
+                s = s.replace(c, "", 1)

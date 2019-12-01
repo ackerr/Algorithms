@@ -10,5 +10,5 @@ class Solution:
         return res
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().length_of_longest_substring("abba") == 2

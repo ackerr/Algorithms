@@ -1,3 +1,6 @@
+from typing import List
+
+
 class Solution:
     def missing_umber(self, nums: List[int]) -> int:
         n = len(nums)

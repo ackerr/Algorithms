@@ -1,5 +1,7 @@
-class Solution:
+from typing import List
 
+
+class Solution:
     def wiggle_max_length(self, nums: List[int]) -> int:
         if len(nums) < 2:
             return len(nums)

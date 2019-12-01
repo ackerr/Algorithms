@@ -12,6 +12,6 @@ class Solution:
         return ans >= n
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert not Solution().can_place_flowers([1, 0, 0, 1, 0, 0, 1], 1)
     assert Solution().can_place_flowers([0, 0, 1, 0, 0], 2)

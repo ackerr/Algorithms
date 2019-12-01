@@ -15,7 +15,6 @@ class Solution:
             left = self.diff_ways_to_compute(value[:i])
             right = self.diff_ways_to_compute(value[i + 1 :])
 
-
             for j in left:
                 for k in right:
                     if char == "+":
