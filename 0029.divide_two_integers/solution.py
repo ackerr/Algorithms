@@ -8,4 +8,4 @@ class Solution:
                 x += 1
             res += 1 << x
             a -= b << x
-        return min(res if sign else -res, 2**31-1)  # 防一手溢出
+        return min(res if sign else -res, 2 ** 31 - 1)  # 防一手溢出

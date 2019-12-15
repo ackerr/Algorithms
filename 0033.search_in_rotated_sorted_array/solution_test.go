@@ -2,12 +2,11 @@ package main
 
 import "testing"
 
-
 func TestSearch(t *testing.T) {
 	nums := []int{6, 7, 8, 9, 1, 3, 4, 5}
 	target := 8
 	index := search(nums, target)
-	if index != 2{
+	if index != 2 {
 		t.Errorf("target %d index error", target)
 	}
 
@@ -18,5 +17,3 @@ func TestSearch(t *testing.T) {
 		t.Errorf("target %d index error", target)
 	}
 }
-
-
