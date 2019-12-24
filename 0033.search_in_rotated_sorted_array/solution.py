@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left, right = 0, len(nums) - 1
@@ -20,7 +21,6 @@ class Solution:
         return -1
 
 
-if __name__ == '__main__':
-    nums = [14,25,36,37,4,9,10,13]
+if __name__ == "__main__":
+    nums = [14, 25, 36, 37, 4, 9, 10, 13]
     assert Solution().search(nums, 36) == 2
-

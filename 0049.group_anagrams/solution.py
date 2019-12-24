@@ -13,5 +13,8 @@ class Solution:
         return [i for i in ans.values()]
 
 
-if __name__ == '__main__':
-    assert Solution().group_anagrams(["abc", "cba", "baa", "aba"]) == [["abc", "cba"], ["baa", "aba"]]
+if __name__ == "__main__":
+    assert Solution().group_anagrams(["abc", "cba", "baa", "aba"]) == [
+        ["abc", "cba"],
+        ["baa", "aba"],
+    ]

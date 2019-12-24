@@ -11,7 +11,7 @@ class Solution:
         ans = ListNode(None)
         ans.next = head
         p = ans
-        for _ in range(m-1):
+        for _ in range(m - 1):
             p = p.next
 
         head = p.next
@@ -21,4 +21,3 @@ class Solution:
             temp.next = p.next
             p.next = temp
         return ans.next
-

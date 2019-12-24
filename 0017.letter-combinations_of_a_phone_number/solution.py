@@ -13,9 +13,9 @@ class Solution:
             "6": "mno",
             "7": "pqrs",
             "8": "tuv",
-            "9": "wxyz"
+            "9": "wxyz",
         }
         ans = [""]
         for n in digits:
-            ans = [pre+suf for pre in ans for suf in m.get(n)]
+            ans = [pre + suf for pre in ans for suf in m.get(n)]
         return ans
