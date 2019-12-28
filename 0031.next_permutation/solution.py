@@ -1,14 +1,16 @@
 class Solution:
     def next_permutation(self, nums):
-        l = len(nums) - 2
-        while l > 0 and nums[l + 1] <= nums[l]:
-            l -= 1
+        i = len(nums) - 2
+        while i >= 0 and nums[i + 1] <= nums[i]:  # 找到第一个不是倒序排列的值
+            i -= 1
 
-        if l >= 0:
+        if i >= 0:  # 找到第一个比i大的值
             j = len(nums) - 1
-            while j >= 0 and nums[j] <= nums[l]:
+            while j >= 0 and nums[j] <= nums[i]:
                 j -= 1
-            nums[l], nums[j] = nums[j], nums[l]
-        for i in range(0, len(nums) // 2):
-            nums[i], nums[-i-1] = nums[-i-1], nums[i]
-
+            nums[i], nums[j] = nums[j], nums[i]
+        left, right = i+1, len(nums) - 1
+        while left < right:  # 反转倒序排列的值，形成下一个值，或最小值
+            nums[left], nums[right] = nums[right], nums[left]
+            left += 1
+            right -= 1
