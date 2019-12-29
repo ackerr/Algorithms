@@ -11,7 +11,7 @@ class Solution:
                 else:
                     return 0
             else:
-                if 10 < int(s[i - 1:i + 1]) < 27:  #
+                if 10 < int(s[i - 1:i + 1]) < 27:  # 只有前一个值为1-2，当前值为1-6才能组合
                     dp[i + 1] += dp[i - 1] + dp[i]
                 else:
                     dp[i + 1] += dp[i]
@@ -26,14 +26,14 @@ class Solution:
             return 0
         pre = cur = 1
         for i in range(1, len(s)):
-            if s[i] == "0":  # 如果一个值为0，必须与前一个值组合，并且前面一个值必须为1或2才能组合
+            if s[i] == "0":
                 if 0 < int(s[i - 1]) < 3:
                     pre, cur = cur, pre
                 else:
                     return 0
             else:
-                if 10 < int(s[i - 1:i + 1]) < 27:  #
+                if 10 < int(s[i - 1:i + 1]) < 27:
                     pre, cur = cur, pre + cur
                 else:
-                    pre, cur = cur, cur
+                    pre = cur
         return cur
