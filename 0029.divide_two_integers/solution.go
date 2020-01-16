@@ -11,8 +11,8 @@ func abs(x int) int {
 	return x
 }
 
-func min(a, b int) int{
-	if a <= b{
+func min(a, b int) int {
+	if a <= b {
 		return a
 	}
 	return b
@@ -31,12 +31,12 @@ func divide(dividend int, divisor int) int {
 	for a >= b {
 		var x uint = 0
 		for a >= (b << (x + 1)) {
-			x ++
+			x++
 		}
 		res += 1 << x
 		a -= b << x
 	}
-	if !sign{
+	if !sign {
 		res = -res
 	}
 	return min(res, math.MaxInt32)

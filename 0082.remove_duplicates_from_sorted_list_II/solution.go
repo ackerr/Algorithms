@@ -6,15 +6,15 @@ import (
 )
 
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 func (node *ListNode) String() string {
 	s := node
 	var results string
 	for s != nil {
-		results +=strconv.Itoa(s.Val)
+		results += strconv.Itoa(s.Val)
 		s = s.Next
 	}
 	return results
@@ -22,11 +22,11 @@ func (node *ListNode) String() string {
 }
 
 func deleteDuplicates(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil{
+	if head == nil || head.Next == nil {
 		return head
 	}
-	if head.Val == head.Next.Val{
-		for head.Next != nil && head.Val == head.Next.Val{
+	if head.Val == head.Next.Val {
+		for head.Next != nil && head.Val == head.Next.Val {
 			head = head.Next
 		}
 		return deleteDuplicates(head.Next)

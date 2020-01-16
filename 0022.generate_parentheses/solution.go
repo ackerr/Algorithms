@@ -10,8 +10,8 @@ func generateParenthesis(n int) []string {
 
 func backtrack(s string, left, right int, ans *[]string) {
 	fmt.Println(left, right)
-	if left == 0 {  // s中没左括号了，其余的都是不匹配的值
-		for i:=0;i<right;i++{
+	if left == 0 { // s中没左括号了，其余的都是不匹配的值
+		for i := 0; i < right; i++ {
 			s += ")"
 		}
 		*ans = append(*ans, s)

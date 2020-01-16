@@ -1,6 +1,5 @@
 package main
 
-
 func flipAndInvertImage(A [][]int) [][]int {
 	for _, i := range A {
 		l := len(i)
