@@ -51,6 +51,35 @@ class Solution:
                 start = (i - max_len) // 2
         return s[start : start + max_len]
 
+    def dp(self, s: str) -> str:
+        if len(s) < 2:
+            return s
+
+        max_len = 1
+        start = 0
+
+        dp = [[0 for _ in s] for _ in s]
+        for i in range(len(s)):
+            dp[i][i] = 1
+
+        for j in range(len(s)):
+            for i in range(0, j):
+                if s[i] == s[j]:
+                    if j - i < 3:
+                        dp[i][j] = 1
+                    else:
+                        dp[i][j] = dp[i + 1][j - 1]
+                else:
+                    dp[i][j] = 0
+
+                if dp[i][j]:
+                    cur_len = j - i + 1
+                    if cur_len > max_len:
+                        max_len = cur_len
+                        start = i
+        return s[start : start + max_len]
+
 
 if __name__ == "__main__":
     print(Solution().longest_palindrome("bdbbd"))
+    print(Solution().dp("abcdeafedcba"))
