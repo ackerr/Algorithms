@@ -1,20 +1,16 @@
 class Solution:
     def longest_common_prefix(self, strs):
-        prefix = ""
         if len(strs) == 0:
-            return prefix
+            return ""
 
-        for i in range(len(strs[0])):
-            char = strs[0][i]
-            value = sum([s[i] == char for s in strs if i < len(s)])
-            if value == len(strs):
-                prefix += char
-            else:
-                break
-        return prefix
+        m, n = min(strs), max(strs)
+        for i, v in enumerate(m):
+            if v != n[i]:
+                return m[:i]
+        return m
 
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.longest_common_prefix(["s"]))
     print(s.longest_common_prefix(["s", "as"]))
+    print(s.longest_common_prefix(["flower", "flow", "flight"]))
