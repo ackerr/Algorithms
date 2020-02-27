@@ -2,7 +2,7 @@ package main
 
 import "sort"
 
-func three_sum(nums []int) [][]int {
+func threeSum(nums []int) [][]int {
 	var ans [][]int
 	sort.Ints(nums)
 
