@@ -17,9 +17,9 @@ class Solution:
                     right = i
                     break
                 cur = 0
-        return bool(right and right != len(A) and sum(A[right + 1 :]) == target)
+        return bool(right and right != len(A) - 1 and sum(A[right + 1 :]) == target)
 
 
 if __name__ == "__main__":
-    assert not Solution().canThreePartsEqualSum([24, -4, -5, -12, 5, 16, -12, 22, 2])
-    assert Solution().canThreePartsEqualSum([12, -4, 16, -5, 9, -3, 3, 8, 0])
+    assert not Solution().canThreePartsEqualSum([24, -4, -5, -12, 5, 16, -12, 22, 2]))
+    assert Solution().canThreePartsEqualSum([12, -4, 16, -5, 9, -3, 3, 8, 0]))
