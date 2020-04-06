@@ -9,7 +9,7 @@ class Solution:
             while j >= 0 and nums[j] <= nums[i]:
                 j -= 1
             nums[i], nums[j] = nums[j], nums[i]
-        left, right = i+1, len(nums) - 1
+        left, right = i + 1, len(nums) - 1
         while left < right:  # 反转倒序排列的值，形成下一个值，或最小值
             nums[left], nums[right] = nums[right], nums[left]
             left += 1

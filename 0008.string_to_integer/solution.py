@@ -4,7 +4,9 @@ import re
 class Solution:
     def my_atoi(self, s: str) -> int:
         """ int(*[]) == 0 """
-        return max(min(int(*re.findall(r"^[\-\+]?\d+", s.lstrip())), (2 << 30) - 1), -2 << 30)
+        return max(
+            min(int(*re.findall(r"^[\-\+]?\d+", s.lstrip())), (2 << 30) - 1), -2 << 30
+        )
 
 
 if __name__ == "__main__":

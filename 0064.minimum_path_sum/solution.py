@@ -22,5 +22,5 @@ class Solution:
         return ans[-1]
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert Solution().min_path_sum([[1, 3, 1], [1, 5, 1], [4, 2, 1]]) == 7
