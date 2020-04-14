@@ -16,7 +16,7 @@ class Solution:
         return ans
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(Solution().max_product([2, 4, 2, -4]))
     print(Solution().max_product([2, 4, -2, 4]))
     print(Solution().max_product([2, 0, -2, -4]))

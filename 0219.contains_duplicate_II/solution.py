@@ -2,9 +2,9 @@ from typing import List
 
 
 class Solution:
-    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        """ 
-        只要有一个重复值的索引差 小于等于 k 即可 
+    def contains_nearby_duplicate(self, nums: List[int], k: int) -> bool:
+        """
+        只要有一个重复值的索引差 小于等于 k 即可
         通过dict存值，出现重复指时，进行比较索引值，如果大于则覆盖原有索引
         """
         storage = {}

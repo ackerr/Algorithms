@@ -1,3 +1,8 @@
 # (ง •̀_•́)ง
 
-## leetcode
+## Leetcode
+
+
+### TODO
+
+- [ ] Add github action to check code style

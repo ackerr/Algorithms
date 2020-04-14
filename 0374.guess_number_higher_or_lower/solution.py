@@ -9,13 +9,13 @@ def guess(num):
 
 class Solution:
     def guess_number(self, n: int) -> int:
-        l, r = 1, n + 1
-        while l < r:
-            mid = (r + l) >> 1
+        left, right = 1, n + 1
+        while left < right:
+            mid = (right + left) >> 1
             if guess(mid) == 1:
-                l = mid + 1
+                left = mid + 1
             elif guess(mid) == -1:
-                r = mid - 1
+                right = mid - 1
             else:
                 return mid
-        return l
+        return left
