@@ -11,6 +11,4 @@ class Solution:
             return False
         if root.val == sum and not root.left and not root.right:
             return True
-        return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(
-            root.right, sum - root.val
-        )
+        return self.hasPathSum(root.left, sum - root.val) or self.hasPathSum(root.right, sum - root.val)

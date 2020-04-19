@@ -11,11 +11,7 @@ class Solution:
             return True
         left = self.depth(root.left)
         right = self.depth(root.right)
-        return (
-            abs(left - right) <= 1
-            and self.is_balance(root.left)
-            and self.is_balance(root.right)
-        )
+        return abs(left - right) <= 1 and self.is_balance(root.left) and self.is_balance(root.right)
 
     def depth(self, root: TreeNode):
         if not root:

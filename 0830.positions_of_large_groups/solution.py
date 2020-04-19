@@ -9,9 +9,7 @@ class Solution:
                 right = i
             else:
                 left = right = i
-            if (
-                right - left > 1 and s[right] != s[right + 1 : right + 2]
-            ):  # tip: ignore out of index error
+            if right - left > 1 and s[right] != s[right + 1 : right + 2]:  # tip: ignore out of index error
                 ans.append([left, right])
         return ans
 

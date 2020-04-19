@@ -5,4 +5,4 @@
 
 ### TODO
 
-- [ ] Add github action to check code style
+- [x] Add github action to check code style

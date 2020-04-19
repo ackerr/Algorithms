@@ -12,7 +12,7 @@ func TestOddEvenList(t *testing.T) {
 	first := ListNode{Val: 1, Next: &second}
 	result := oddEvenList(&first)
 	var r []int
-	for result != nil{
+	for result != nil {
 		r = append(r, result.Val)
 		result = result.Next
 	}

@@ -14,6 +14,4 @@ class Solution:
                 cur.next = cur.next.next
             else:
                 cur = cur.next
-        return (
-            head.next if head.val == val else head
-        )  # verify the case of linked-list length is one
+        return head.next if head.val == val else head  # verify the case of linked-list length is one

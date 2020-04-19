@@ -14,8 +14,4 @@ class Solution:
             count += deep(root.right, sum - root.val)
             return count
 
-        return (
-            deep(root, sum)
-            + self.path_sum(root.left, sum)
-            + self.path_sum(root.right, sum)
-        )
+        return deep(root, sum) + self.path_sum(root.left, sum) + self.path_sum(root.right, sum)

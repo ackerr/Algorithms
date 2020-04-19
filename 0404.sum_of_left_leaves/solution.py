@@ -12,6 +12,4 @@ class Solution:
         if root.left and not root.left.left and not root.left.right:
             return root.left.val + self.sum_of_left_leaves(root.left)
         else:
-            return self.sum_of_left_leaves(root.left) + self.sum_of_left_leaves(
-                root.right
-            )
+            return self.sum_of_left_leaves(root.left) + self.sum_of_left_leaves(root.right)

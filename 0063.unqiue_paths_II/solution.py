@@ -17,15 +17,11 @@ class Solution:
 
         # 判断第一行的情况
         for i in range(1, right):
-            obstacle_grid[0][i] = (
-                obstacle_grid[0][i - 1] if obstacle_grid[0][i] == 0 else 0
-            )
+            obstacle_grid[0][i] = obstacle_grid[0][i - 1] if obstacle_grid[0][i] == 0 else 0
 
         # 判断第一列的情况
         for i in range(1, down):
-            obstacle_grid[i][0] = (
-                obstacle_grid[i - 1][0] if obstacle_grid[i][0] == 0 else 0
-            )
+            obstacle_grid[i][0] = obstacle_grid[i - 1][0] if obstacle_grid[i][0] == 0 else 0
 
         # 从(1,1)开始将上和左的次数相加
         for i in range(1, down):
@@ -33,9 +29,7 @@ class Solution:
                 if obstacle_grid[i][j] == 1:
                     obstacle_grid[i][j] = 0
                 else:
-                    obstacle_grid[i][j] = (
-                        obstacle_grid[i][j - 1] + obstacle_grid[i - 1][j]
-                    )
+                    obstacle_grid[i][j] = obstacle_grid[i][j - 1] + obstacle_grid[i - 1][j]
 
         return obstacle_grid[down - 1][right - 1]
 

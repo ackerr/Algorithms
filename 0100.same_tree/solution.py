@@ -12,8 +12,4 @@ class Solution:
             return True
         if not p or not q:
             return False
-        return (
-            p.val == q.val
-            and self.is_same_tree(p.left, q.left)
-            and self.is_same_tree(p.right, q.right)
-        )
+        return p.val == q.val and self.is_same_tree(p.left, q.left) and self.is_same_tree(p.right, q.right)
