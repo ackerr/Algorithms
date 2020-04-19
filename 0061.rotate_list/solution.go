@@ -1,5 +1,6 @@
 package main
 
+// ListNode definition for singly-linked list.
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -10,17 +11,17 @@ func rotateRight(head *ListNode, k int) *ListNode {
 		return head
 	}
 	count := 1
-	old_tail := head
-	new_tail := head
-	for old_tail.Next != nil {
-		old_tail = old_tail.Next
+	oldTail := head
+	newTail := head
+	for oldTail.Next != nil {
+		oldTail = oldTail.Next
 		count++
 	}
-	old_tail.Next = head
+	oldTail.Next = head
 	for i := 0; i < count-k%count-1; i++ {
-		new_tail = new_tail.Next
+		newTail = newTail.Next
 	}
-	ans := new_tail.Next
-	new_tail.Next = nil
+	ans := newTail.Next
+	newTail.Next = nil
 	return ans
 }

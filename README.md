@@ -1,8 +1,4 @@
 # (ง •̀_•́)ง
+![](https://github.com/Ackerr/Algorithms/workflows/Lint/badge.svg)
 
 ## Leetcode
-
-
-### TODO
-
-- [x] Add github action to check code style

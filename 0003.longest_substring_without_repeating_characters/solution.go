@@ -9,15 +9,15 @@ func lengthOfLongestSubstring(s string) int {
 	left := 0
 	for right := 0; right < len(s); right++ {
 		if val, ok := mark[s[right]]; ok {
-			left = Max(left, val)
+			left = max(left, val)
 		}
-		ans = Max(ans, right-left+1)
+		ans = max(ans, right-left+1)
 		mark[s[right]] = right + 1
 	}
 	return ans
 }
 
-func Max(a, b int) int {
+func max(a, b int) int {
 	if a < b {
 		return b
 	}

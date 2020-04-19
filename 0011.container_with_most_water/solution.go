@@ -1,13 +1,13 @@
 package main
 
-func Min(a, b int) int {
+func min(a, b int) int {
 	if a < b {
 		return a
 	}
 	return b
 }
 
-func Max(a, b int) int {
+func max(a, b int) int {
 	if a > b {
 		return a
 	}
@@ -18,8 +18,8 @@ func maxArea(height []int) int {
 	maxArea := 0
 	var left, right = 0, len(height) - 1
 	for left < right {
-		area := Min(height[left], height[right]) * (right - left)
-		maxArea = Max(maxArea, area)
+		area := min(height[left], height[right]) * (right - left)
+		maxArea = max(maxArea, area)
 		if height[left] < height[right] {
 			left++
 		} else {

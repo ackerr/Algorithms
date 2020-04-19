@@ -2,5 +2,3 @@
 .vscode/
 env/
 *.class
-go.mod
-go.sum
