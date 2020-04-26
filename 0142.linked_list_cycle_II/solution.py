@@ -11,7 +11,7 @@ class Solution:
             fast, slow = fast.next.next, slow.next
             if fast == slow:
                 break
-        if not(fast and fast.next):
+        if not (fast and fast.next):
             return
         while head != slow:
             head, slow = head.next, slow.next
