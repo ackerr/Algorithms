@@ -10,9 +10,9 @@ func searchMatrix(matrix [][]int, target int) bool {
 		if matrix[m][n] == target {
 			return true
 		} else if matrix[m][n] > target {
-			m --
+			m--
 		} else {
-			n ++
+			n++
 		}
 	}
 	return false

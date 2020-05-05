@@ -2,9 +2,9 @@ package main
 
 // TreeNode is definition for a binary tree node.
 type TreeNode struct {
-    Val int
-    Left *TreeNode
-    Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func kthSmallest(root *TreeNode, k int) int {
@@ -16,9 +16,9 @@ func kthSmallest(root *TreeNode, k int) int {
 			root = root.Left
 		} else {
 			k--
-			root = stack[len(stack) - 1]  // python list.pop(）
+			root = stack[len(stack)-1] // python list.pop(）
 			kthVal = root.Val
-			stack = stack[: len(stack) - 1]
+			stack = stack[:len(stack)-1]
 			root = root.Right
 		}
 		if k == 0 {

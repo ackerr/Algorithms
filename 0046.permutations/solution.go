@@ -5,13 +5,13 @@ func permute(nums []int) [][]int {
 }
 
 func dfs(first, length int, nums []int) (ans [][]int) {
-	if first == length{
+	if first == length {
 		ans = append(ans, nums)
 	}
-	for i := first;i<length;i++{
-		nums[i], nums[first] =nums[i], nums[first]
+	for i := first; i < length; i++ {
+		nums[i], nums[first] = nums[i], nums[first]
 		dfs(first+1, length, nums)
-		nums[i], nums[first] =nums[i], nums[first]
+		nums[i], nums[first] = nums[i], nums[first]
 	}
 	return ans
 }

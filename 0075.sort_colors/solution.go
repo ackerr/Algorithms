@@ -6,13 +6,13 @@ func sortColors(nums []int) {
 	for cur <= right {
 		if nums[cur] == 0 {
 			nums[cur], nums[left] = nums[left], nums[cur]
-			cur ++
-			left ++
+			cur++
+			left++
 		} else if nums[cur] == 2 {
 			nums[cur], nums[right] = nums[right], nums[cur]
-			right --
+			right--
 		} else {
-			cur ++
+			cur++
 		}
 	}
 }
