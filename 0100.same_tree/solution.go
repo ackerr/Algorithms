@@ -7,15 +7,6 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func isSubtree(s *TreeNode, t *TreeNode) bool {
-	if s == nil && t == nil {
-		return true
-	} else if s == nil || t == nil {
-		return false
-	}
-	return isSameTree(s, t) || isSubtree(s.Left, t) || isSubtree(s.Right, t)
-}
-
 func isSameTree(m *TreeNode, n *TreeNode) bool {
 	if m == nil && n == nil {
 		return true

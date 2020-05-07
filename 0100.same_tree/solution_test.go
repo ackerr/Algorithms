@@ -2,17 +2,15 @@ package main
 
 import "testing"
 
-func TestIsSubTree(t *testing.T) {
+func TestIsSameTree(t *testing.T) {
 	p := TreeNode{1, nil, nil}
 	left := TreeNode{2, &p, &TreeNode{3, nil, nil}}
 	right := TreeNode{6, &TreeNode{5, nil, nil}, &TreeNode{7, nil, nil}}
-	node := TreeNode{4, &left, &right}
-	if isSubtree(&node, &left) == false {
+	if isSameTree(&right, &right) == false {
 		t.Errorf("results should be true")
 	}
 
-	node = TreeNode{2, &p, &TreeNode{3, &p, nil}}
-	if isSubtree(&node, &left) == true {
+	if isSameTree(&right, &left) == true {
 		t.Errorf("results should be false")
 	}
 }
