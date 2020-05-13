@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def orangesRotting(self, grid: List[List[int]]) -> int:
-        R, C = len(grid), len(grid[0])
+        rows, cols = len(grid), len(grid[0])
         queue = []
-        for i in range(R):
-            for j in range(C):
+        for i in range(rows):
+            for j in range(cols):
                 if grid[i][j] == 2:
                     queue.append((i, j, 0))
 
@@ -14,11 +14,11 @@ class Solution:
         while queue:
             i, j, ans = queue.pop(0)
             for row, col in ((i - 1, j), (i + 1, j), (i, j - 1), (i, j + 1)):
-                if 0 <= row < R and 0 <= col < C and grid[row][col] == 1:
+                if 0 <= row < rows and 0 <= col < cols and grid[row][col] == 1:
                     grid[row][col] = 2
                     queue.append((row, col, ans + 1))
 
-        if any(1 in l for l in grid):
+        if any(1 in row for row in grid):
             return -1
         return ans
 
