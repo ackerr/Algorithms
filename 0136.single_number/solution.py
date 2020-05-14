@@ -4,8 +4,8 @@ class Solution:
         0^1 = 1
         1^1 = 0
         """
-        value = 0
-        for num in nums:
+        value = nums[0]
+        for num in nums[1:]:
             value ^= num
         return value
 
