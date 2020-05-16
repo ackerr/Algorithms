@@ -1,4 +1,4 @@
-package main
+package leetcode1013
 
 import "testing"
 

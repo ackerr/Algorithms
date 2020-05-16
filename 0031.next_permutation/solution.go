@@ -1,4 +1,4 @@
-package main
+package leetcode0031
 
 func nextPermutation(nums []int) []int {
 	i := len(nums) - 2

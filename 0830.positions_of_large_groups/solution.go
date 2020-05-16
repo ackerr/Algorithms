@@ -1,4 +1,4 @@
-package main
+package leetcode0830
 
 func largeGroupPositions(S string) [][]int {
 	var ans [][]int

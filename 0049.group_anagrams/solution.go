@@ -1,4 +1,4 @@
-package main
+package leetcode0049
 
 func groupAnagrams(strs []string) [][]string {
 	m := make(map[[26]int][]string)

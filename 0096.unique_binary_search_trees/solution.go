@@ -1,4 +1,4 @@
-package main
+package leetcode0096
 
 func numTrees(n int) int {
 	m := make([]int, n+1)

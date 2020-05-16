@@ -1,4 +1,4 @@
-package main
+package leetcode0046
 
 func permute(nums []int) [][]int {
 	return dfs(0, len(nums), nums)

@@ -1,4 +1,4 @@
-package main
+package leetcode0236
 
 // TreeNode is definition for TreeNode.
 type TreeNode struct {

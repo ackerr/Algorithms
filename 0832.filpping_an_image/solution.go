@@ -1,4 +1,4 @@
-package main
+package leetcode0832
 
 func flipAndInvertImage(A [][]int) [][]int {
 	for _, i := range A {

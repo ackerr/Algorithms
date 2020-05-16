@@ -1,4 +1,4 @@
-package main
+package leetcode0011
 
 func min(a, b int) int {
 	if a < b {

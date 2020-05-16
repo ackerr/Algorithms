@@ -1,4 +1,4 @@
-package main
+package leetcode0033
 
 func search(nums []int, target int) int {
 	left, right := 0, len(nums)-1

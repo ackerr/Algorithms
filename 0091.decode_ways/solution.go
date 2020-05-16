@@ -1,4 +1,4 @@
-package main
+package leetcode0091
 
 func numDecodings(s string) int {
 	if s[0] == '0' {

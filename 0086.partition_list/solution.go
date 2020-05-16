@@ -1,4 +1,4 @@
-package main
+package leetcode0086
 
 // ListNode definition for singly-linked list. {
 type ListNode struct {

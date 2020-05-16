@@ -1,4 +1,4 @@
-package main
+package leetcode0136
 
 func singleNumber(nums []int) int {
 	res := nums[0]

@@ -1,7 +1,6 @@
-package main
+package leetcode0147
 
 import (
-	"fmt"
 	"reflect"
 	"testing"
 )
@@ -17,7 +16,6 @@ func TestInsertionSortList(t *testing.T) {
 		result = append(result, sortLinkList.Val)
 		sortLinkList = sortLinkList.Next
 	}
-	fmt.Println(result)
 	correct := []int{3, 4, 5, 6}
 	if !reflect.DeepEqual(result, correct) {
 		t.Errorf("result error, correct result should be %d", correct)

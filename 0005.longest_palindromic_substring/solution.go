@@ -1,4 +1,4 @@
-package main
+package leetcode0005
 
 func longestPalindrome(s string) string {
 	if len(s) < 2 {

@@ -1,4 +1,4 @@
-package main
+package leetcode0139
 
 func wordBreak(s string, wordDict []string) bool {
 	b := []byte(s)

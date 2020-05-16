@@ -1,4 +1,4 @@
-package main
+package leetcode0994
 
 import "fmt"
 
@@ -33,7 +33,6 @@ func orangesRotting(grid [][]int) int {
 				queue = append(queue, position{x: row, y: col, level: ans + 1})
 			}
 		}
-		fmt.Println(queue)
 		queue = queue[1:]
 	}
 

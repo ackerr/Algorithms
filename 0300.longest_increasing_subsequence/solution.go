@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package leetcode0300
 
 func lengthOfLIS(nums []int) int {
 	length := len(nums)
@@ -18,7 +16,6 @@ func lengthOfLIS(nums []int) int {
 				dp[i] = max([]int{dp[i], dp[j] + 1})
 			}
 		}
-		fmt.Println(dp)
 	}
 	return max(dp)
 }

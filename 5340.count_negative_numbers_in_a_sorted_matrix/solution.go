@@ -1,4 +1,4 @@
-package main
+package leetcode5340
 
 func countNegatives(grid [][]int) int {
 	if len(grid) == 0 {

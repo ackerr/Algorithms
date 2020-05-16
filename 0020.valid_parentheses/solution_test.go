@@ -1,4 +1,4 @@
-package main
+package leetcode0020
 
 import "testing"
 

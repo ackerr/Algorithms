@@ -1,4 +1,4 @@
-package main
+package leetcode0020
 
 func isValid(s string) bool {
 	pair := map[rune]rune{'}': '{', ')': '(', ']': '['}

@@ -1,4 +1,4 @@
-package main
+package leetcode0120
 
 func minimumTotal(triangle [][]int) int {
 	length := len(triangle)

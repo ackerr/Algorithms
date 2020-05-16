@@ -1,4 +1,4 @@
-package main
+package leetcode0017
 
 func letterCombinations(digits string) []string {
 	if digits == "" {
