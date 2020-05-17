@@ -1,16 +1,12 @@
 package leetcode0147
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func insertionSortList(head *ListNode) *ListNode {
+func insertionSortList(head *utils.ListNode) *utils.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
-	ans := ListNode{Val: 0}
+	ans := utils.ListNode{Val: 0}
 	ans.Next = head
 	for head != nil && head.Next != nil {
 		if head.Val <= head.Next.Val {

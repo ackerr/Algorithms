@@ -1,12 +1,8 @@
 package leetcode0019
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func removeNthFromEnd(head *ListNode, n int) *ListNode {
+func removeNthFromEnd(head *utils.ListNode, n int) *utils.ListNode {
 	if head == nil {
 		return nil
 	}

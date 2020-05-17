@@ -1,12 +1,8 @@
 package leetcode0061
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func rotateRight(head *ListNode, k int) *ListNode {
+func rotateRight(head *utils.ListNode, k int) *utils.ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}

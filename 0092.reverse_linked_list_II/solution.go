@@ -1,16 +1,12 @@
 package leetcode0092
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func reverseBetween(head *ListNode, m int, n int) *ListNode {
+func reverseBetween(head *utils.ListNode, m int, n int) *utils.ListNode {
 	if head == nil || m > n {
 		return head
 	}
-	ans := &ListNode{}
+	ans := &utils.ListNode{}
 	ans.Next = head
 	p := ans
 	for i := 1; i < m; i++ {

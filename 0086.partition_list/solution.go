@@ -1,19 +1,16 @@
 package leetcode0086
 
-// ListNode definition for singly-linked list. {
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func partition(head *ListNode, x int) *ListNode {
+
+func partition(head *utils.ListNode, x int) *utils.ListNode {
 	if head == nil {
 		return head
 	}
 
-	low := &ListNode{Val: -1}
+	low := &utils.ListNode{Val: -1}
 	ans := low
-	high := &ListNode{Val: -1}
+	high := &utils.ListNode{Val: -1}
 	target := high
 	for head != nil {
 		if head.Val < x {

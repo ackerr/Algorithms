@@ -1,7 +1,4 @@
-class ListNode:
-    def __init__(self, v):
-        self.v = v
-        self.next = None
+from utils import ListNode
 
 
 class Solution:

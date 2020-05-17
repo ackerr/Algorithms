@@ -1,12 +1,15 @@
 package leetcode0142
 
-import "testing"
+import (
+	"github.com/Ackerr/Algorithms/utils"
+	"testing"
+)
 
 func TestDetectCycle(t *testing.T) {
-	fourth := ListNode{Val: 4}
-	third := ListNode{Val: 3, Next: &fourth}
-	second := ListNode{Val: 2, Next: &third}
-	first := ListNode{Val: 1, Next: &second}
+	fourth := utils.ListNode{Val: 4}
+	third := utils.ListNode{Val: 3, Next: &fourth}
+	second := utils.ListNode{Val: 2, Next: &third}
+	first := utils.ListNode{Val: 1, Next: &second}
 	fourth.Next = &second
 
 	if detectCycle(&first) != &second {

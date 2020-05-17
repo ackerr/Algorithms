@@ -1,6 +1,9 @@
 package leetcode0056
 
-import "sort"
+import (
+	"github.com/Ackerr/Algorithms/utils"
+	"sort"
+)
 
 func merge(intervals [][]int) [][]int {
 	if len(intervals) < 2 {
@@ -18,15 +21,8 @@ func merge(intervals [][]int) [][]int {
 		if last == -1 || ans[last][1] < interval[0] {
 			ans = append(ans, interval)
 		} else {
-			ans[last][1] = max(ans[last][1], interval[1])
+			ans[last][1] = utils.Max(ans[last][1], interval[1])
 		}
 	}
 	return ans
-}
-
-func max(a, b int) int {
-	if a < b {
-		return b
-	}
-	return a
 }

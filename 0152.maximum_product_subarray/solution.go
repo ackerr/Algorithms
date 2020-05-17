@@ -1,6 +1,9 @@
 package leetcode0152
 
-import "math"
+import (
+	"github.com/Ackerr/Algorithms/utils"
+	"math"
+)
 
 func maxProduct(nums []int) int {
 	ans := math.MinInt32
@@ -9,23 +12,9 @@ func maxProduct(nums []int) int {
 		if n < 0 {
 			currentMax, currentMin = currentMin, currentMax
 		}
-		currentMax = max(currentMax*n, n)
-		currentMin = min(currentMin*n, n)
-		ans = max(currentMax, ans)
+		currentMax = utils.Max(currentMax*n, n)
+		currentMin = utils.Min(currentMin*n, n)
+		ans = utils.Max(currentMax, ans)
 	}
 	return ans
-}
-
-func max(a, b int) int {
-	if a >= b {
-		return a
-	}
-	return b
-}
-
-func min(a, b int) int {
-	if a <= b {
-		return a
-	}
-	return b
 }

@@ -1,6 +1,8 @@
 package leetcode0014
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func longestCommonPrefix(strs []string) string {
 	if len(strs) == 0 {

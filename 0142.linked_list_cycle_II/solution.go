@@ -1,12 +1,8 @@
 package leetcode0142
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func detectCycle(head *ListNode) *ListNode {
+func detectCycle(head *utils.ListNode) *utils.ListNode {
 	fast, slow := head, head
 	// Check is cycle linked list
 	for fast != nil && fast.Next != nil {

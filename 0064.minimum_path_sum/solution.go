@@ -1,5 +1,7 @@
 package leetcode0064
 
+import "github.com/Ackerr/Algorithms/utils"
+
 func minPathSum(grid [][]int) int {
 	length := len(grid[0])
 	ans := make([]int, length)
@@ -13,16 +15,9 @@ func minPathSum(grid [][]int) int {
 			if j == 0 {
 				ans[j] += grid[i][j]
 			} else {
-				ans[j] = min(ans[j], ans[j-1]) + grid[i][j]
+				ans[j] = utils.Min(ans[j], ans[j-1]) + grid[i][j]
 			}
 		}
 	}
 	return ans[length-1]
-}
-
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
 }

@@ -1,17 +1,12 @@
 package leetcode0098
 
-// TreeNode definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func isValidBST(root *TreeNode) bool {
+func isValidBST(root *utils.TreeNode) bool {
 	return dfs(root, -1<<63, 1<<63-1)
 }
 
-func dfs(node *TreeNode, low, high int) bool {
+func dfs(node *utils.TreeNode, low, high int) bool {
 	if node == nil {
 		return true
 	}

@@ -1,12 +1,8 @@
 package leetcode0024
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func swapPairs(head *ListNode) *ListNode {
+func swapPairs(head *utils.ListNode) *utils.ListNode {
 	p := head
 	for p != nil && p.Next != nil {
 		p.Val, p.Next.Val = p.Next.Val, p.Val

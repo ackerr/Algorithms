@@ -1,13 +1,8 @@
 package leetcode0572
 
-// TreeNode definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func isSubtree(s *TreeNode, t *TreeNode) bool {
+func isSubtree(s *utils.TreeNode, t *utils.TreeNode) bool {
 	if s == nil && t == nil {
 		return true
 	} else if s == nil || t == nil {
@@ -16,7 +11,7 @@ func isSubtree(s *TreeNode, t *TreeNode) bool {
 	return isSameTree(s, t) || isSubtree(s.Left, t) || isSubtree(s.Right, t)
 }
 
-func isSameTree(m *TreeNode, n *TreeNode) bool {
+func isSameTree(m *utils.TreeNode, n *utils.TreeNode) bool {
 	if m == nil && n == nil {
 		return true
 	} else if m == nil || n == nil {

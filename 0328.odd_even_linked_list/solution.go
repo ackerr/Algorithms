@@ -1,12 +1,8 @@
 package leetcode0328
 
-// ListNode definition for singly-linked list.
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func oddEvenList(head *ListNode) *ListNode {
+func oddEvenList(head *utils.ListNode) *utils.ListNode {
 	if head == nil {
 		return head
 	}

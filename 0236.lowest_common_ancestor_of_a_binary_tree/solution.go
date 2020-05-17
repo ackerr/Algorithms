@@ -1,13 +1,9 @@
 package leetcode0236
 
-// TreeNode is definition for TreeNode.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+
+func lowestCommonAncestor(root, p, q *utils.TreeNode) *utils.TreeNode {
 	if root == nil {
 		return root
 	}

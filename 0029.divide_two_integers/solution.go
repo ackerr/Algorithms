@@ -1,26 +1,14 @@
 package leetcode0029
 
 import (
+	"github.com/Ackerr/Algorithms/utils"
 	"math"
 )
 
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
-
-func min(a, b int) int {
-	if a <= b {
-		return a
-	}
-	return b
-}
 
 func divide(dividend int, divisor int) int {
 	sign := (dividend < 0) == (divisor < 0)
-	a, b, res := abs(dividend), abs(divisor), 0
+	a, b, res := utils.Abs(dividend), utils.Abs(divisor), 0
 	// if i -> int build error, i -> uint leetcode error
 	//for i = 31; i >= 0; i--{
 	//	if (a >> i) >= b {
@@ -39,5 +27,5 @@ func divide(dividend int, divisor int) int {
 	if !sign {
 		res = -res
 	}
-	return min(res, math.MaxInt32)
+	return utils.Min(res, math.MaxInt32)
 }

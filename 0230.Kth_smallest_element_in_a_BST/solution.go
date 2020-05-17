@@ -1,14 +1,9 @@
 package leetcode0230
 
-// TreeNode is definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func kthSmallest(root *TreeNode, k int) int {
-	stack := make([]*TreeNode, 0)
+func kthSmallest(root *utils.TreeNode, k int) int {
+	stack := make([]*utils.TreeNode, 0)
 	kthVal := 0
 	for root != nil || len(stack) != 0 {
 		if root != nil {

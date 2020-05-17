@@ -1,18 +1,13 @@
 package leetcode0102
 
-// TreeNode definition for a binary tree node.
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+import "github.com/Ackerr/Algorithms/utils"
 
-func levelOrder(root *TreeNode) [][]int {
+func levelOrder(root *utils.TreeNode) [][]int {
 	ans := make([][]int, 0)
 	if root == nil {
 		return ans
 	}
-	queue := []*TreeNode{root}
+	queue := []*utils.TreeNode{root}
 	for len(queue) > 0 {
 		length := len(queue)
 		temp := make([]int, length)
