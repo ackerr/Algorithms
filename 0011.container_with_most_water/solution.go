@@ -2,7 +2,6 @@ package leetcode0011
 
 import "github.com/Ackerr/Algorithms/utils"
 
-
 func maxArea(height []int) int {
 	maxArea := 0
 	var left, right = 0, len(height) - 1

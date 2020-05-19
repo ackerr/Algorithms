@@ -5,7 +5,6 @@ import (
 	"math"
 )
 
-
 func divide(dividend int, divisor int) int {
 	sign := (dividend < 0) == (divisor < 0)
 	a, b, res := utils.Abs(dividend), utils.Abs(divisor), 0

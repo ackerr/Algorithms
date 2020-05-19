@@ -2,7 +2,6 @@ package leetcode0086
 
 import "github.com/Ackerr/Algorithms/utils"
 
-
 func partition(head *utils.ListNode, x int) *utils.ListNode {
 	if head == nil {
 		return head

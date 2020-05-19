@@ -2,7 +2,6 @@ package leetcode0236
 
 import "github.com/Ackerr/Algorithms/utils"
 
-
 func lowestCommonAncestor(root, p, q *utils.TreeNode) *utils.TreeNode {
 	if root == nil {
 		return root
