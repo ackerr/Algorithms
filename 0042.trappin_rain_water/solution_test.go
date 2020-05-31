@@ -17,4 +17,10 @@ func TestTrap(t *testing.T) {
 		}
 	}
 
+	for i, r := range req {
+		if trap2(r) != res[i] {
+			t.Errorf("trap(%+v) 's results should be %d, not %d", r, res[i], trap2(r))
+		}
+	}
+
 }

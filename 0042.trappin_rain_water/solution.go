@@ -27,3 +27,25 @@ func trap(height []int) int {
 	}
 	return ans
 }
+
+func trap2(height []int) int {
+	length := len(height)
+	if length == 0 {
+		return 0
+	}
+	ans := 0
+	leftMax, rightMax := height[0], height[length-1]
+	left, right := 0, length-1
+	for left < right {
+		if height[left] <= height[right] {
+			leftMax = utils.Max(leftMax, height[left])
+			ans += leftMax - height[left]
+			left++
+		} else {
+			rightMax = utils.Max(rightMax, height[right])
+			ans += rightMax - height[right]
+			right--
+		}
+	}
+	return ans
+}
