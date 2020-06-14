@@ -43,6 +43,20 @@ func Max(a, b int) int {
 	return b
 }
 
+// MaxList : utils.MaxList(1,2,3,4) = 4
+func MaxList(array []int) int {
+	if len(array) == 0 {
+		panic("Why the array's length is zero")
+	}
+	ans := array[0]
+	for _, v := range array {
+		if v > ans {
+			ans = v
+		}
+	}
+	return ans
+}
+
 // Abs : utils.Abs(-1) == 1
 func Abs(x int) int {
 	if x < 0 {
