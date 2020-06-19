@@ -7,7 +7,7 @@ func TestLRUCache(t *testing.T) {
 
 	cache.Put(1, 1)
 	cache.Put(2, 2)
-	if cache.Get(1) != 1{
+	if cache.Get(1) != 1 {
 		t.Errorf("results error")
 	}
 	cache.Put(3, 3)

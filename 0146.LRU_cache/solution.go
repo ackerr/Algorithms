@@ -16,9 +16,9 @@ type LRUCache struct {
 // Constructor : init a LRUCache with capacity
 func Constructor(capacity int) LRUCache {
 	cache := LRUCache{
-		cap: capacity,
-		head: &DoublyLinkedList{key: 0, value: 0},
-		tail: &DoublyLinkedList{key: 0, value: 0},
+		cap:   capacity,
+		head:  &DoublyLinkedList{key: 0, value: 0},
+		tail:  &DoublyLinkedList{key: 0, value: 0},
 		cache: map[int]*DoublyLinkedList{},
 	}
 	cache.head.next = cache.tail
