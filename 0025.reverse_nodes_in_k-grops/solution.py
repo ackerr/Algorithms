@@ -2,7 +2,6 @@ import utils
 
 
 class Solution:
-
     def reverse(self, head: utils.ListNode, tail: utils.ListNode):
         """ 反转head到tail之间的节点 """
         prev = tail.next

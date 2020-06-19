@@ -15,12 +15,10 @@ class Solution:
         return self.climb_stairs(n - 1) + self.climb_stairs(n - 2)
 
     def loop_solution(self, n):
-        if n < 3:
-            return n
-        a, b, m = 1, 2, 3
-        while m <= n:
-            a, b, m = b, a + b, m + 1
-        return b
+        a, b = 1, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
 
 
 if __name__ == "__main__":
