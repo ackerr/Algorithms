@@ -1,17 +1,15 @@
-from random import random
 from typing import List
 
 
 class Solution:
-    def pivot(self, nums, left, right):
-        v = random.randint(left, right)
-        p = nums[v]
+    def partition(self, nums, left, right):
+        p = nums[left]
         j = left
         for i in range(left + 1, right + 1):
             if nums[i] < p:
                 j += 1
                 nums[i], nums[j] = nums[j], nums[i]
-        nums[v], nums[j] = nums[j], nums[v]
+        nums[left], nums[j] = nums[j], nums[left]
         return j
 
     def find_Kth_largest(self, nums: List[int], k: int) -> int:
@@ -24,10 +22,10 @@ class Solution:
         index = length - k
         left, right = 0, length - 1
         while True:
-            p = self.pivot(nums, left, right)
+            p = self.partition(nums, left, right)
             if p > index:
-                right -= 1
+                right = left + 1
             elif p < index:
-                left += 1
+                left = right - 1
             else:
                 return nums[p]
