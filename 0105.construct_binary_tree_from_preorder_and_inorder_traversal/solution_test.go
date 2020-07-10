@@ -7,25 +7,27 @@ import (
 )
 
 func TestBuildTree(t *testing.T) {
-	preorder := []int{3,9,20,15,7}
-	inorder := []int{9,3,15,20,7}
+	preorder := []int{3, 9, 20, 15, 7}
+	inorder := []int{9, 3, 15, 20, 7}
 	tree := buildTree(preorder, inorder)
-	if reflect.DeepEqual(buildInorder(tree, []int{}), inorder){
+
+	if !reflect.DeepEqual(buildInorder(tree), inorder) {
 		t.Errorf("buildTree(%+v,  %+v), result error ", preorder, inorder)
 	}
 
 }
 
-func buildInorder(node *utils.TreeNode, inorder []int) []int {
-	if node == nil{
-		return inorder
+func buildInorder(node *utils.TreeNode) []int {
+	return dfs(node)
+}
+
+func dfs(node *utils.TreeNode) []int {
+	if node == nil {
+		return nil
 	}
-	if node.Left != nil {
-		buildInorder(node.Left, inorder)
-	}
-	inorder = append(inorder, node.Val)
-	if node.Right != nil {
-		buildInorder(node.Right, inorder)
-	}
-	return inorder
+	var ans []int
+	ans = append(ans, dfs(node.Left)...)
+	ans = append(ans, node.Val)
+	ans = append(ans, dfs(node.Right)...)
+	return ans
 }

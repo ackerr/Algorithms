@@ -12,6 +12,7 @@ class Solution:
             ans.append(node.val)
             ans = inorder(node.right, ans)
             return ans
+
         return inorder(root, [])
 
     def loop(self, root):
@@ -24,5 +25,3 @@ class Solution:
             ans.append(root.val)
             root = root.right
         return ans
-
-
