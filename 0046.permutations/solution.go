@@ -1,18 +1,23 @@
 package leetcode0046
 
 func permute(nums []int) [][]int {
-	return dfs(0, len(nums), nums)
-}
+	if len(nums) == 1 {
+		return [][]int{nums}
+	}
 
-func dfs(first, length int, nums []int) (ans [][]int) {
-	// fixme
-	if first == length {
-		ans = append(ans, nums)
+	var res [][]int
+
+	for i, num := range nums {
+		// 把num从 nums 拿出去 得到tmp
+		tmp := make([]int, len(nums)-1)
+		copy(tmp[0:], nums[0:i])
+		copy(tmp[i:], nums[i+1:])
+
+		// sub 是把num 拿出去后，数组中剩余数据的全排列
+		sub := permute(tmp)
+		for _, s := range sub {
+			res = append(res, append(s, num))
+		}
 	}
-	for i := first; i < length; i++ {
-		nums[i], nums[first] = nums[i], nums[first]
-		dfs(first+1, length, nums)
-		nums[i], nums[first] = nums[i], nums[first]
-	}
-	return ans
+	return res
 }
